@@ -1,0 +1,2 @@
+This short script downloads and installs the latest version of [miniconda](https://docs.conda.io/en/latest/miniconda.html) and link the `conda` executable to `$HOME/bin/conda`. This ensures that `conda` can be found in the `PATH` (without modification) and is therefore available even if invoked from a non interactive shell like a `cron` job.
+> When `conda` is launched from a `cron` job, since the environment files like `.profile` are not loaded, the executable is not available. One can then add the _general_ following command to the `cron` job: `. $HOME/.profile; [...]`.
